@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="data:image/png;base64,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">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="top-bar">
+            <a href="#" class="logo">
+                <span class="logo-text">Olx</span>
+            </a>
+
+            <div class="top-links">
+                <a href="#" class="top-item">
+                    <img src="https://www.olx.com.pk/assets/iconMotors.6bf280165e43e55b173d0a53551e2bfb.png" alt="Car"
+                        class="top-icon">
+                    <span class="top-text">Motors</span>
+                </a>
+
+                <a href="#" class="top-item">
+                    <img src="https://www.olx.com.pk/assets/iconProperty.d09c6d2e3621f900c17c9e8330a1a37b.png"
+                        alt="House" class="top-icon">
+                    <span class="top-text">Property</span>
+                </a>
+            </div>
+
+            <div class="account">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="sell-btn">
+                    <img src="https://www.olx.com.pk/assets/iconPlusSell_noinline.75fc7ea23e80b50447cf5757d8ef083a.svg"
+                        alt="+ icon" class="plus">
+                    <span class="sell-text">Sell</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <div class="location-box">
+                <img src="https://www.olx.com.pk/assets/iconLocationGradient_noinline.ec45db16ede268cd2719a09f0d10437f.svg"
+                    alt="location icon" class="location-icon">
+                <span class="location-text">Pakistan</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="location-arrow">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Find Cars, Mobile Phones and more..." class="search-input">
+                <button class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="search-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                    <span class="search-text">Search</span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="all-categories">
+                <span>All Categories</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="nav-arrow">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </a>
+            <a href="#" class="menu">Mobile Phones</a>
+            <a href="#" class="menu">Cars</a>
+            <a href="#" class="menu">Motorcycles</a>
+            <a href="#" class="menu">Houses</a>
+            <a href="#" class="menu">Video-Audios</a>
+            <a href="#" class="menu">Tablets</a>
+            <a href="#" class="menu">Land &amp; Plots</a>
+        </nav>
+    </header>
+
+    <main class="olx-content">
+        <section class="banner">
+            <a href="#">
+                <img src="https://olx-pk-prod.s3.ap-southeast-1.amazonaws.com/image/649865699/ad39bb7de74f474d9f178180c42302a4"
+                    alt="banner">
+            </a>
+        </section>
+
+        <section class="categories-section">
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/mobiles.73f961c6ad58605c032eb7c2cf12aeaa.png" alt="Mobiles">
+                </div>
+                <h3>Mobiles</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/vehicles.354a5ebfb7f21e87991a277dd4b40f4b.png"
+                        alt="Vehicles">
+                </div>
+                <h3>Vehicles</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/property-for-sale.69b01e8dafc182fa3bd469d0ed4fc801.png"
+                        alt="Property for Sale">
+                </div>
+                <h3>Property for Sale</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/property-for-rent.49f99cc528b9b88da4f33fbe1f0b3346.png"
+                        alt="Property for Rent">
+                </div>
+                <h3>Property for Rent</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/electronics-home-appliances.0a30101e6fd7d9ccc8cd6b85b9b44cee.png"
+                        alt="Electronics">
+                </div>
+                <h3>Electronics & Home...</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/bikes.0a5064ae987f3bd72801b7bc2c3b6e02.png" alt="Bikes">
+                </div>
+                <h3>Bikes</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/business-industrial-agriculture.2ec28979a1bde0183c777a0ce51b37c6.png"
+                        alt="Business">
+                </div>
+                <h3>Business, Industrial &...</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/services.23d8eb1535f319324813848887961a59.png"
+                        alt="Services">
+                </div>
+                <h3>Services</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/jobs.dc882b8ff65e94850cc12f5abd605420.png" alt="Jobs">
+                </div>
+                <h3>Jobs</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/animals.476fa9caaf88a12dfbcd6db4c8c6f17a.png" alt="Animals">
+                </div>
+                <h3>Animals</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/furniture-home-decor.47a1998de5f4a8a9e84702dcb40bb313.png"
+                        alt="Furniture">
+                </div>
+                <h3>Furniture & Home Decor</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/fashion-beauty.6ef7c1f060c92b55a6b28bfcfb16a1d2.png"
+                        alt="Fashion">
+                </div>
+                <h3>Fashion & Beauty</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/books-sports-hobbies.9406daf905b451fa283048652f414054.png"
+                        alt="Books">
+                </div>
+                <h3>Books, Sports & Hobbies</h3>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="category-image">
+                    <img src="https://www.olx.com.pk/assets/kids.5de42a58bc91f81fa22ccc401d7ac285.png" alt="Kids">
+                </div>
+                <h3>Kids</h3>
+            </a>
+        </section>
+
+
+        <section class="vehicles">
+            <div class="heading">
+                <h2>Cars</h2>
+                <a href="#">View More</a>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <a href="#" class="card-link">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600" alt="Honda Civic">
+                        <div class="card-content">
+                            <div class="price">
+                                <h3>Rs 5 Lac</h3>
+                                <span class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="name">Honda Civic Exi 1994</p>
+                            <p class="details">1994 . 100,000 km . LPG</p>
+                            <p class="location">Surjani Town, Karachi</p>
+                            <p class="time">1 week ago</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="card-link">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600" alt="Honda City">
+                        <div class="card-content">
+                            <div class="price">
+                                <h3>Rs 41.50 Lacs</h3>
+                                <span class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="name">Honda City IVTEC 1.5 PROSMATEC 2020</p>
+                            <p class="details">2020 &bull; 82,000 km &bull; Petrol</p>
+                            <p class="location">Bahria Town Phase 8, Rawalpindi</p>
+                            <small>1 week ago</small>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="card-link">
+                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600"
+                            alt="KIA Sportage">
+                        <div class="card-content">
+                            <div class="price">
+                                <h3>Rs 62 Lacs</h3>
+                                <span class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="name">KIA Sportage FWD</p>
+                            <p class="details">2020 &bull; 72,000 km &bull; Petrol</p>
+                            <p class="location">Cantt, Sialkot</p>
+                            <small>1 week ago</small>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="card-link">
+                        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=600" alt="Star lights">
+                        <div class="card-content">
+                            <div class="price">
+                                <h3>Rs 45,000</h3>
+                                <span class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="name">Star lights</p>
+                            <p class="location" style="margin-top: 10px;">DC Colony, Gujranwala</p>
+                            <small>1 week ago</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="vehicles">
+            <div class="heading">
+                <h2>Mobiles</h2>
+                <a href="#">View More</a>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <a href="#" class="card-link">
+                        <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600" alt="iPhone">
+                        <div class="card-content">
+                            <div class="price">
+                                <h3>Rs 85,000</h3>
+                                <span class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="name">iPhone 13 128GB</p>
+                            <p class="details">128 GB . 4 GB RAM</p>
+                            <p class="location">Gulshan, Karachi</p>
+                            <p class="time">1 week ago</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="card-link">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600"
+                            alt="Samsung Mobile">
+                        <div class="card-content">
+                            <div class="price">
+                                <h3>Rs 65,000</h3>
+                                <span class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="name">Samsung Galaxy S23</p>
+                            <p class="details">256 GB . 8 GB RAM</p>
+                            <p class="location">DHA, Lahore</p>
+                            <p class="time">1 week ago</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="card-link">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScsxmPYVRhM5JZj7ZRelMau2J2gn0f_G8hehecGWCvPw&s=10"
+                            alt="Infinix Mobile">
+                        <div class="card-content">
+                            <div class="price">
+                                <h3 style="font-size: 15px;">Rs 32,000</h3>
+                                <span class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="rect"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="name">Infinix Hot 40</p>
+                            <p class="details">128 GB . 8 GB RAM</p>
+                            <p class="location">Saddar, Karachi</p>
+                            <p class="time">1 week ago</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="card-link">
+                        <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=600" alt="Vivo Mobile">
+                        <div class="card-content">
+                            <div class="price">
+                                <h3>Rs 28,000</h3>
+                                <span class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="name">Vivo Y21</p>
+                            <p class="details">64 GB . 4 GBRAM</p>
+                            <p class="location">Model Town, Lahore</p>
+                            <p class="time">1.week ago</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
